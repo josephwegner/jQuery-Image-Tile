@@ -3,6 +3,8 @@ jQuery Image Tiles
 
 A jQuery plugin for adding a tile animation to any image.
 
+####[Demo](http://wegnerdesign.com/demo/fadeTiles/)
+
 Use
 ---
 It's very easy to run this plugin with the basic features.  All you need is an image and jQuery loaded.  So your HTML might look like this:
