@@ -59,6 +59,8 @@
 		$("body").append(overDiv);
 
 		setInterval(function() { beginFading(options.animationTime, options.columns, options.rows, options.tilesAtATime, options.maxOpacity, allTiles);  }, options.newTilesTime);
+
+		return this;
 	};
 
 	var beginFading = function(fadeTime, cols, rows, numTiles, maxOpacity, tiles) {
