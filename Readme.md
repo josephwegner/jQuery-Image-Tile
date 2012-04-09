@@ -31,7 +31,7 @@ We also offer some options that you can override to better fit your needs:
 
 - **rows** ~ _Integer_ The number of rows in the grid. _Defaults to 10_
 - **columns** ~ _Integer_ The number of columns in the grid. _Defaults to 10_
-- *animateTime** ~ _Integer_ or _String_ The time for the fade effect to finish on each tile.  This accepts a millisecond value, or a jQuery timing string such as "slow". _Defaults to 800_
+- **animateTime** ~ _Integer_ or _String_ The time for the fade effect to finish on each tile.  This accepts a millisecond value, or a jQuery timing string such as "slow". _Defaults to 800_
 - **newTilesTime** ~ _Integer_ How often new tiles will be chosen to fade, in milliseconds.  _Defaults to 400_
 - **tilesAtATime** ~ _Integer_ The number of tiles to fade at the same time. _Defaults to 5_
 - **backgroundColor** ~ _String_ The color of the tiles.  Accepts any valid CSS value, such as "white" or "#C1C1C1". _Defaults to "white"_
