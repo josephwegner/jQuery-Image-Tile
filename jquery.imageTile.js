@@ -77,10 +77,7 @@
 		for(var i=0; i<numTiles; i++) {
 			var tile = fadeTiles[i];
 		
-			console.log(maxOpacity);
 			var fade = Math.random() * maxOpacity;
-			console.log(fade);
-			console.log("");
 	
 			$(tile).stop(true).fadeTo(fadeTime, fade);
 		}
