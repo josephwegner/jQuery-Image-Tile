@@ -1,6 +1,6 @@
 (function($) {
 
-	$.fn.tile = function(options) {
+	$.fn.imageTile = function(options) {
 		var options = $.extend({
 			rows: 10,
 			columns: 10,
@@ -8,8 +8,13 @@
 			newTilesTime: 400,
 			tilesAtATime: 5,
 			backgroundColor: "white",
-			className: "jquery_tile_div"
+			className: "jquery_tile_div",
+			maxOpacity: 1
 		}, options)
+
+		if(options.maxOpacity > 1) {
+			options.maxOpacity = option.maxOpacity / 100;
+		}
 
 		console.log($(this).height());
 		console.log($(this).width());
@@ -56,10 +61,10 @@
 
 		$("body").append(overDiv);
 
-		setInterval(function() { beginFading(options.animationTime, options.columns, options.rows, options.tilesAtATime, allTiles);  }, options.newTilesTime);
+		setInterval(function() { beginFading(options.animationTime, options.columns, options.rows, options.tilesAtATime, options.maxOpacity, allTiles);  }, options.newTilesTime);
 	};
 
-	var beginFading = function(fadeTime, cols, rows, numTiles, tiles) {
+	var beginFading = function(fadeTime, cols, rows, numTiles, maxOpacity, tiles) {
 		var fadeTiles = [];
 
 		while(fadeTiles.length < numTiles) {
@@ -72,9 +77,12 @@
 		}
 		for(var i=0; i<numTiles; i++) {
 			var tile = fadeTiles[i];
-
-			var fade = Math.random();
-
+		
+			console.log(maxOpacity);
+			var fade = Math.random() * maxOpacity;
+			console.log(fade);
+			console.log("");
+	
 			$(tile).stop(true).fadeTo(fadeTime, fade);
 		}
 	};
